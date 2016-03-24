@@ -9,3 +9,7 @@ config.vm.provider "virtualbox" do |v|
   v.cpus = 2
 end
 ```
+
+
+##resource:
++ https://www.vagrantup.com/docs
