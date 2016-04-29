@@ -11,5 +11,10 @@ end
 ```
 
 
+##Base:
++ vagrant up (install ubuntu x64)
++ vagrant ssh
++ exit
+
 ##resource:
 + https://www.vagrantup.com/docs
