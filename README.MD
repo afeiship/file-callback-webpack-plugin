@@ -18,3 +18,7 @@ end
 
 ##resource:
 + https://www.vagrantup.com/docs
+
+
+## Fixed ip:
++ config.vm.network :private_network, ip: "192.168.199.200"
