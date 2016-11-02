@@ -11,12 +11,20 @@ end
 ```
 
 
-##Base:
-+ vagrant up (install ubuntu x64)
-+ vagrant ssh
-+ exit
+## base:
++ install vagrant:
+```bsh
+brew install Caskroom/cask/vagrant
+```
++ select os:
+```bash
+# http://www.vagrantbox.es/
+vagrant box add {title} {url}
+vagrant init {title}
+vagrant up
+```
 
-##resource:
+## resource:
 + https://www.vagrantup.com/docs
 
 
