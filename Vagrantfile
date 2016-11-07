@@ -13,7 +13,8 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "vagrant-centos7.2"
-
+  config.vm.synced_folder "/Users/feizheng/git-oschina/wordpress-qiping", "/var/www/wordpress-qiping"
+  config.vm.network :private_network, ip: "192.168.10.10"
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.

@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www/wordpress-qiping":{"guestpath":"/var/www/wordpress-qiping","hostpath":"/Users/feizheng/git-oschina/wordpress-qiping","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/feizheng/github/fei-vagrant","disabled":false,"__vagrantfile":true}}}
