@@ -15,8 +15,11 @@ Vagrant.configure("2") do |config|
   config.vm.box = "vagrant-centos7.2"
 
   # synced_folder
+  # qiping.cc
   config.vm.synced_folder "/Users/feizheng/git-oschina/wordpress-qiping", "/var/www/wordpress-qiping",
   owner:'apache',group:'apache'
+
+  # fakee.com
   config.vm.synced_folder "/Users/feizheng/git-oschina/fakee.com", "/var/www/fakee.com",
   owner:'apache',group:'apache'
 
