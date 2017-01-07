@@ -47,3 +47,5 @@ vagrant up
 
 ## resource:
 + https://www.vagrantup.com/docs
++ http://blog.csdn.net/zhouhuakang/article/details/51098066
++ http://stackoverflow.com/questions/1401482/yyyy-mm-dd-format-date-in-shell-script
