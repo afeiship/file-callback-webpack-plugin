@@ -2,7 +2,7 @@
 My vagrant config files.
 
 
-## memery/cpu info:
+## memory/cpu info:
 ```ruby
 config.vm.provider "virtualbox" do |v|
   v.memory = 1024
