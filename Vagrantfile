@@ -17,14 +17,14 @@ Vagrant.configure("2") do |config|
   # config.vm.box = "~/Downloads/virtualbox.box"
 
   # basic config:
-  config.vm.box = "fei-vagrant-centos7.2"
+  config.vm.box = "/Users/feizheng/soft/vagrant-files/vagrant-centos-7.2.box"
   config.vm.hostname = "dev-local"
 
   # SSH auth method: password
   # vagrant username/password:
   config.ssh.username = "vagrant"
   config.ssh.password = "vagrant"
-  config.ssh.insert_key = true
+  config.ssh.insert_key = false
 
 
   # SSH auth method: private key
@@ -33,16 +33,16 @@ Vagrant.configure("2") do |config|
 
   # synced_folder
   # qiping.cc
-  config.vm.synced_folder "/Users/feizheng/git-oschina/wordpress-qiping",
-  "/var/www/wordpress-qiping",
-  owner:'apache',
-  group:'apache'
+  # config.vm.synced_folder "/Users/feizheng/git-oschina/wordpress-qiping",
+  # "/var/www/wordpress-qiping",
+  # owner:'apache',
+  # group:'apache'
 
   # fakee.com
-  config.vm.synced_folder "/Users/feizheng/git-oschina/fakee.com",
-  "/var/www/fakee.com",
-  owner:'apache',
-  group:'apache'
+  # config.vm.synced_folder "/Users/feizheng/git-oschina/fakee.com",
+  # "/var/www/fakee.com",
+  # owner:'apache',
+  # group:'apache'
 
   # network
   config.vm.network :private_network, ip: "192.168.20.20"
