@@ -39,10 +39,9 @@ Vagrant.configure("2") do |config|
   # group:'apache'
 
   # fakee.com
-  # config.vm.synced_folder "/Users/feizheng/git-oschina/fakee.com",
-  # "/var/www/fakee.com",
-  # owner:'apache',
-  # group:'apache'
+  config.vm.synced_folder "/Users/feizheng/git-oschina/","/var/www/html/",
+  owner:'apache',
+  group:'apache'
 
   # network
   config.vm.network :private_network, ip: "192.168.20.20"
