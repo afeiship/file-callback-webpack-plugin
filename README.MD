@@ -10,6 +10,11 @@ config.vm.provider "virtualbox" do |v|
 end
 ```
 
+## vagrant + apache cache problem:
++ sudo vim /etc/httpd/conf/httpd.conf
++ line:348:EnableSendfile off
+
+
 ## import a new box file:
 ```bash
 # download:
