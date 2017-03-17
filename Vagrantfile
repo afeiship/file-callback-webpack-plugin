@@ -26,9 +26,7 @@ Vagrant.configure("2") do |config|
   config.ssh.password = "vagrant"
   config.ssh.insert_key = false
 
-
-  # SSH auth method: private key
-  # config.ssh.private_key_path = '~/.ssh/id_rsa'
+  # config.ssh.private_key_path = "~/.ssh/id_rsa"
   # config.ssh.forward_agent = true
 
   # synced_folder
@@ -78,13 +76,13 @@ Vagrant.configure("2") do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider "virtualbox" do |vb|
+  config.vm.provider "virtualbox" do |vb|
   #   # Display the VirtualBox GUI when booting the machine
   #   vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
-  # end
+    vb.memory = "2048"
+  end
   #
   # View the documentation for the provider you are using for more
   # information on available options.
