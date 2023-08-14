@@ -1,6 +1,6 @@
 {
   "name": "@jswork/file-callback-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "File callback webpack plugin.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -54,5 +54,11 @@
   },
   "dependencies": {
     "json5": "^2.2.3"
-  }
+  },
+  "keywords": [
+    "callback",
+    "file",
+    "webpack",
+    "webpack5"
+  ]
 }
