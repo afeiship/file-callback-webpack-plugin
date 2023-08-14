@@ -13,9 +13,32 @@ npm install @jswork/file-callback-webpack-plugin
 
 ## usage
 ```js
-import fileCallbackWebpackPlugin from '@jswork/file-callback-webpack-plugin';
+const { defineConfig } = require('@vue/cli-service');
+const FileCbPlugin = require('@jswork/file-callback-webpack-plugin');
+const { envname } = require('@jswork/ci-kits');
+const ENVS = require('./.env-cmdrc');
+const currentEnvs = ENVS[envname()];
 
-// usage goes here.
+// usage
+const manifestReplace = new FileCbPlugin({
+  path: 'src/manifest.json',
+  callback: (content) => {
+    nx.set(
+      content,
+      'mp-weixin.appid',
+      JSON.parse(currentEnvs['VUE_APP_APP_ID'])
+    );
+    return content;
+  }
+});
+
+module.exports = defineConfig({
+  configureWebpack: (config) => {
+    const plugins = config.plugins;
+    config.devtool = 'source-map';
+    config.plugins = [...plugins, manifestReplace];
+  }
+});
 ```
 
 ## license
