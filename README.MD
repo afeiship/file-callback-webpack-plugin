@@ -1,57 +1,34 @@
-# fei-vagrant
-My vagrant config files.
+# file-callback-webpack-plugin
+> File callback webpack plugin.
 
+[![version][version-image]][version-url]
+[![license][license-image]][license-url]
+[![size][size-image]][size-url]
+[![download][download-image]][download-url]
 
-## memory/cpu info:
-```ruby
-config.vm.provider "virtualbox" do |v|
-  v.memory = 1024
-  v.cpus = 2
-end
+## installation
+```shell
+npm install @jswork/file-callback-webpack-plugin
 ```
 
-## vagrant + apache cache problem:
-+ sudo vim /etc/httpd/conf/httpd.conf
-+ line:348:EnableSendfile off
+## usage
+```js
+import fileCallbackWebpackPlugin from '@jswork/file-callback-webpack-plugin';
 
-
-## import a new box file:
-```bash
-# download:
-wget  https://github.com/CommanderK5/packer-centos-template/releases/download/0.7.2/vagrant-centos-7.2.box
-mv ~/Downlods/vagrant-centos-7.2.box ~/soft/vagrant-files/
-
-#edit Vagrantfile
-# config.vm.box = "/Users/feizheng/soft/vagrant-files/vagrant-centos-7.2.box"
-vagrant box add --name "fei-vagrant-centos-7.2" "/Users/feizheng/soft/vagrant-files/vagrant-centos-7.2.box"
-vagrant up
+// usage goes here.
 ```
 
+## license
+Code released under [the MIT license](https://github.com/afeiship/file-callback-webpack-plugin/blob/master/LICENSE.txt).
 
-## base:
-+ install vagrant:
-```bash
-brew install Caskroom/cask/vagrant
+[version-image]: https://img.shields.io/npm/v/@jswork/file-callback-webpack-plugin
+[version-url]: https://npmjs.org/package/@jswork/file-callback-webpack-plugin
 
-# vagrant up	启动本地环境
-# vagrant halt	关闭本地环境
-# vagrant suspend	暂停本地环境
-# vagrant resume	恢复本地环境
-# vagrant reload	修改了 Vagrantfile 后，使之生效（相当于先 halt，再 up）
-# vagrant ssh	通过 ssh 登录本地环境所在虚拟机
-# vagrant destroy	彻底移除本地环境
-```
+[license-image]: https://img.shields.io/npm/l/@jswork/file-callback-webpack-plugin
+[license-url]: https://github.com/afeiship/file-callback-webpack-plugin/blob/master/LICENSE.txt
 
-+ select os:
-```bash
-# http://www.vagrantbox.es/
-vagrant box add {title} {url}
-vagrant init {title}
-vagrant up
-```
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/file-callback-webpack-plugin
+[size-url]: https://github.com/afeiship/file-callback-webpack-plugin/blob/master/dist/file-callback-webpack-plugin.min.js
 
-## resource:
-+ https://www.vagrantup.com/docs
-+ http://blog.csdn.net/zhouhuakang/article/details/51098066
-+ http://stackoverflow.com/questions/1401482/yyyy-mm-dd-format-date-in-shell-script
-+ http://rmingwang.com/vagrant-commands-and-config.html
+[download-image]: https://img.shields.io/npm/dm/@jswork/file-callback-webpack-plugin
+[download-url]: https://www.npmjs.com/package/@jswork/file-callback-webpack-plugin
