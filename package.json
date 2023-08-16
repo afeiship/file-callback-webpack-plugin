@@ -1,6 +1,6 @@
 {
   "name": "@jswork/file-callback-webpack-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "File callback webpack plugin.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
