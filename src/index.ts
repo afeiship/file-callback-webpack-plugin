@@ -26,9 +26,13 @@ class FileCallbackWebpackPlugin {
         const fileContent = fs.readFileSync(path, 'utf-8');
         const isJSON = extention === 'json' || extention === 'json5';
         const content = isJSON ? json5.parse(fileContent) : fileContent;
+        const processedContent = callback(content);
+        // Return null, skip this file
+        if (processedContent === null) return cb();
+
         const modifiedContent = isJSON
-          ? JSON.stringify(callback(content), null, 2)
-          : callback(content);
+          ? JSON.stringify(processedContent, null, 2)
+          : processedContent;
 
         fs.writeFileSync(path, modifiedContent);
         this.processed = true;
